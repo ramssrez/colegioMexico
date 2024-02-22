@@ -7,6 +7,10 @@
         <title>Colegio Instituto México</title>
     </head>
     <body>
-        <h1>Esto es la primera prueba</h1>        
+        <?php
+            include("./components/navigationGeneral.php");
+        ?>    
+        <h1 class="titulo">Colegio Instituto México</h1>      
+        <img class="imagen" src="./img/escuela.png" alt="">  
     </body>
 </html>

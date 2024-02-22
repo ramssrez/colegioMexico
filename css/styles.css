@@ -12,3 +12,28 @@ body{
     min-height: 100%;
     background-color: brown;
 }
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.8);
+}
+.navbar li{
+    float: left;
+}
+.navbar li a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.navbar li a:hover{
+    background-color: #2c2c2c;
+    color: #e50914;
+}
+li:last-child {
+    border-right: none;
+}
