@@ -1,3 +1,9 @@
+<?php
+    include './config/conexion.php';
+    $sentencia = $db->query("SELECT * FROM usuarios;");
+    $usuarios = $sentencia->fetchAll(PDO::FETCH_OBJ);
+    print_r($usuarios);
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
