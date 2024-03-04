@@ -12,42 +12,51 @@
         ?>
         <div class="contenedor">
             <h2>Registro</h2>
-            <form action="#">
+            <?php
+                if(isset($_GET['error']) && $_GET['error'] == 1 )
+                {
+                    echo "<p class='error'>No se ha registrado al usuario</p>";
+                }
+                if(isset($_GET['succesful']) && $_GET['succesful'] == 1 )
+                {
+                    echo "<p class='succesful'>Se ha registrado un usuario correctamente</p>";
+                }       
+            ?>
+            <form action="../config/createUser.php" method="POST">
                 <div class="elemento">
-                    <label for="name-user">Nombre</label>
-                    <input type="text" id="name-user" name="name-user">
+                    <label for="userName">Nombre</label>
+                    <input type="text" id="userName" name="userName">
                 </div> 
                 <div class="elemento">
-                    <label for="apellido-paterno-user">Apellido Paterno</label>
-                    <input type="text" id="apellido-paterno-user" name="apellido-paterno-user">
+                    <label for="userApellidoPaterno">Apellido Paterno</label>
+                    <input type="text" id="userApellidoPaterno" name="userApellidoPaterno">
                 </div> 
                 <div class="elemento">
-                    <label for="apellido-materno-user">Apellido Materno</label>
-                    <input type="text" id="apellido-materno-user" name="apellido-materno-user">
+                    <label for="userApellidoMaterno">Apellido Materno</label>
+                    <input type="text" id="userApellidoMaterno" name="userApellidoMaterno">
                 </div> 
                 <div class="elemento">
-                    <label for="name-actor">Edad</label>
-                    <input type="number" id="name-actor" name="name-actor">
+                    <label for="userEdad">Edad</label>
+                    <input type="number" id="userEdad" name="userEdad">
                 </div> 
                 <div class="elemento">
-                    <label for="name-actor">Sexo</label>
-                    <input type="text" id="name-actor" name="name-actor">
-                </div> 
-                <div class="elemento">
-                    <label for="name-actor">Sexo</label>
-                    <select name="" id="">
+                    <label for="userSexo">Sexo</label>
+                    <select name="userSexo" id="userSexo">
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
                     </select>
                 </div>
                 <div class="elemento">
-                    <label for="name-actor">Correo</label>
-                    <input type="text" id="name-actor" name="name-actor">
+                    <label for="userCorreo">Correo</label>
+                    <input type="text" id="userCorreo" name="userCorreo">
                 </div>
                 <div class="elemento">
-                        <input id="btn-agregar" type="submit" name= "submit-cliente" value="Agregar">
+                    <label for="userPassword">Contraseña</label>
+                    <input type="password" id="userPassword" name="userPassword">
                 </div>
-                
+                <div class="elemento">
+                    <input id="btn-agregar" type="submit" name= "userSubmit" value="Agregar">
+                </div>    
             </form>
         </div>
     </body>
