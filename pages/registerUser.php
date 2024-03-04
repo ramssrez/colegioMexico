@@ -15,11 +15,35 @@
             <?php
                 if(isset($_GET['error']) && $_GET['error'] == 1 )
                 {
-                    echo "<p class='error'>No se ha registrado al usuario</p>";
+                    echo "<p class='error'>*Error: No se ha registrado al usuario</p>";
+                }
+                if(isset($_GET['error']) && $_GET['error'] == 2 )
+                {
+                    echo "<p class='error'>*Error: Hay campos vacíos</p>";
+                }
+                if(isset($_GET['error']) && $_GET['error'] == 3 )
+                {
+                    echo "<p class='error'>*Error: La contraseña debe ser mayor a 8 caracteres</p>";
+                }
+                if(isset($_GET['error']) && $_GET['error'] == 4 )
+                {
+                    echo "<p class='error'>*Error: Las contraseñas debe de conincidir</p>";
+                }
+                if(isset($_GET['error']) && $_GET['error'] == 5 )
+                {
+                    echo "<p class='error'>*Error: La contraseña debe de contener un caracter especial (#,$,-,_,&,%)</p>";
+                }
+                if(isset($_GET['error']) && $_GET['error'] == 6 )
+                {
+                    echo "<p class='error'>*Error: La contraseña debe de contener números</p>";
+                }
+                if(isset($_GET['error']) && $_GET['error'] == 7 )
+                {
+                    echo "<p class='error'>*Error: El correo debe de contener el @</p>";
                 }
                 if(isset($_GET['succesful']) && $_GET['succesful'] == 1 )
                 {
-                    echo "<p class='succesful'>Se ha registrado un usuario correctamente</p>";
+                    echo "<p class='succesful'>Se ha registrado un usuario correctamente. Id Usuario=".$_GET['id']."</p>";
                 }       
             ?>
             <form action="../config/createUser.php" method="POST">
@@ -53,6 +77,10 @@
                 <div class="elemento">
                     <label for="userPassword">Contraseña</label>
                     <input type="password" id="userPassword" name="userPassword">
+                </div>
+                <div class="elemento">
+                    <label for="userPasswordDos">Confirmar contraseña</label>
+                    <input type="password" id="userPasswordDos" name="userPasswordDos">
                 </div>
                 <div class="elemento">
                     <input id="btn-agregar" type="submit" name= "userSubmit" value="Agregar">
