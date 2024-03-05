@@ -12,7 +12,13 @@
         ?>
         <div class="contenedor">
             <h2>Login</h2>
-            <form action="#" method="post">
+            <?php
+                if(isset($_GET['error']) && $_GET['error'] == 1 )
+                {
+                    echo "<p class='error'>*Error: El usuario no existe</p>";
+                }   
+            ?>
+            <form action="../config/login.php" method="POST">
                 <div class="elemento">
                     <label for="usuario">Usuario</label>
                     <input type="text" id="usuario" name="user" required="true">
