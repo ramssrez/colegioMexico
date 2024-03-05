@@ -1,6 +1,6 @@
 <?php
-    include './conexion.php';
     session_start();
+    include './conexion.php';
     $usuario = $_POST['user'];
     $pass = $_POST['pass']; 
     //SELECT * FROM `usuarios` WHERE IDUsuario = '9999' AND Pasword = 'Progweb2#';
@@ -11,10 +11,16 @@
     $statement->execute();
     $dataUser = $statement->fetch(PDO::FETCH_ASSOC);
     if($dataUser){
+        $_SESSION['user'] = $dataUser['Nombre'];
+        $_SESSION['apellidoPa'] = $dataUser['ApellidoPaterno'];
+        $_SESSION['apellidoMa'] = $dataUser['ApellidoMaterno'];
+        $_SESSION['tipo'] = $dataUser['TipoUsuario'];
         if($dataUser['TipoUsuario']==='PF'){
-            header("Location: ../pages/userPF.html");
+            //$_SESSION['user'] = $dataUser['Nombre']; 
+            header("Location: ../pages/userPF.php");
         }else if($dataUser['TipoUsuario']==='PDC'){
-            header("Location: ../pages/userPDC.html");
+            //$_SESSION['user'] = $dataUser['Nombre'];
+            header("Location: ../pages/userPDC.php");
         }else{
             header("Location: ../pages/iniciarSession.php?error=1");
         }

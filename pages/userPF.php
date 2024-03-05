@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if($_SESSION['user']){
+        $client = $_SESSION['user'];
+    }
+    else{
+        header("Location: ../index.php");
+        die();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,6 +17,10 @@
         <title>Document</title>
     </head>
     <body>
-        <h1>Usuario PF</h1>
+        <?php
+            include("../components/navigationPF.php");
+        ?> 
+        <h1>!Bienvenido <?php echo $client; ?> <?php echo $_SESSION['apellidoPa']; ?> <?php echo $_SESSION['apellidoMa']; ?>!</h1>
+        <h2>¡Has ingresado como <?php echo $_SESSION['tipo']; ?>!</h2>
     </body>
 </html>
