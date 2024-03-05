@@ -16,11 +16,9 @@
         $_SESSION['apellidoMa'] = $dataUser['ApellidoMaterno'];
         $_SESSION['tipo'] = $dataUser['TipoUsuario'];
         if($dataUser['TipoUsuario']==='PF'){
-            //$_SESSION['user'] = $dataUser['Nombre']; 
-            header("Location: ../pages/userPF.php");
+            header("Location: ../pages/homeUserPF.php");
         }else if($dataUser['TipoUsuario']==='PDC'){
-            //$_SESSION['user'] = $dataUser['Nombre'];
-            header("Location: ../pages/userPDC.php");
+            header("Location: ../pages/homeUserPDC.php");
         }else{
             header("Location: ../pages/iniciarSession.php?error=1");
         }
