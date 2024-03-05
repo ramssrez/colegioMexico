@@ -20,7 +20,7 @@
         <?php
             include("../components/navigationPF.php");
         ?> 
-        <h1>!Bienvenido <?php echo $client; ?> <?php echo $_SESSION['apellidoPa']; ?> <?php echo $_SESSION['apellidoMa']; ?>!</h1>
-        <h2>¡Has ingresado como <?php echo $_SESSION['tipo']; ?>!</h2>
+        <h1 class="bienvenido">!Bienvenido <?php echo $client; ?> <?php echo $_SESSION['apellidoPa']; ?> <?php echo $_SESSION['apellidoMa']; ?>!</h1>
+        <h2 class="bienvenido-dos">¡Has ingresado como <?php echo $_SESSION['tipo']; ?>!</h2>
     </body>
 </html>
