@@ -2,6 +2,6 @@
             <ul>
                 <li><a href="../pages/homeUserPF.php">Inicio</a></li>
                 <li><a href="#">Consultar pagos</a></li>
-                <li><a href="#">Salir</a></li>
+                <li><a href="../config/logout.php">Salir</a></li>
             </ul>
         </nav>
