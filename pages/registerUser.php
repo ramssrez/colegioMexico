@@ -53,15 +53,15 @@
                 </div> 
                 <div class="elemento">
                     <label for="userApellidoPaterno">Apellido Paterno</label>
-                    <input type="text" id="userApellidoPaterno" name="userApellidoPaterno">
+                    <input type="text" id="userApellidoPaterno" name="userApellidoPaterno" required="true">
                 </div> 
                 <div class="elemento">
                     <label for="userApellidoMaterno">Apellido Materno</label>
-                    <input type="text" id="userApellidoMaterno" name="userApellidoMaterno">
+                    <input type="text" id="userApellidoMaterno" name="userApellidoMaterno" required="true">
                 </div> 
                 <div class="elemento">
                     <label for="userEdad">Edad</label>
-                    <input type="number" id="userEdad" name="userEdad">
+                    <input type="number" id="userEdad" name="userEdad" required="true">
                 </div> 
                 <div class="elemento">
                     <label for="userSexo">Sexo</label>
@@ -72,15 +72,15 @@
                 </div>
                 <div class="elemento">
                     <label for="userCorreo">Correo</label>
-                    <input type="text" id="userCorreo" name="userCorreo">
+                    <input type="text" id="userCorreo" name="userCorreo" required="true">
                 </div>
                 <div class="elemento">
                     <label for="userPassword">Contraseña</label>
-                    <input type="password" id="userPassword" name="userPassword">
+                    <input type="password" id="userPassword" name="userPassword" required="true">
                 </div>
                 <div class="elemento">
                     <label for="userPasswordDos">Confirmar contraseña</label>
-                    <input type="password" id="userPasswordDos" name="userPasswordDos">
+                    <input type="password" id="userPasswordDos" name="userPasswordDos" required="true">
                 </div>
                 <div class="elemento">
                     <input id="btn-agregar" type="submit" name= "userSubmit" value="Agregar">
