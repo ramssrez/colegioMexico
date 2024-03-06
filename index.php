@@ -19,7 +19,7 @@
             include("./components/navigationGeneral.php");
         ?>    
         <h1 class="titulo">Colegio Instituto México</h1>      
-        <img class="imagen" src="./img/escuela.png" alt="">  
+        <img class="imagen" src="./img/escuela.jpg" alt="">  
         <p class="descripcion-school">
             El Colegio Instituto México, con domicilio en Av. De las Torres #780,
             Alcaldía Cuauhtémoc, C.P. 06500, Ciudad de México; escuela de tradición con 50 años de experiencia
