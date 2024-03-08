@@ -27,7 +27,7 @@
                 }
                 if(isset($_GET['error']) && $_GET['error'] == 4 )
                 {
-                    echo "<p class='error'>*Error: Las contraseñas debe de conincidir</p>";
+                    echo "<p class='error'>*Error: Las contraseñas debe de coincidir</p>";
                 }
                 if(isset($_GET['error']) && $_GET['error'] == 5 )
                 {
@@ -43,7 +43,7 @@
                 }
                 if(isset($_GET['succesful']) && $_GET['succesful'] == 1 )
                 {
-                    echo "<p class='succesful'>Se ha registrado un usuario correctamente. Id Usuario=".$_GET['id']."</p>";
+                    echo "<p class='succesful'>Se ha registrado un usuario correctamente. Id Usuario Asignado=".$_GET['id']."</p>";
                 }       
             ?>
             <form action="../config/createUser.php" method="POST">

@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `db_instituto_mexico`.`pagos` (
   `Monto` DECIMAL(5,0) NOT NULL,
   `FechaPago` DATE NOT NULL,
   PRIMARY KEY (`idPago`),
-  INDEX `fk_pagos_usuarios_idx` (`idUsuario` ASC) INVISIBLE,
+  INDEX `fk_pagos_usuarios_idx` (`idUsuario` ASC),
   CONSTRAINT `fk_pagos_usuarios`
     FOREIGN KEY (`idUsuario`)
     REFERENCES `db_instituto_mexico`.`usuarios` (`id`)
