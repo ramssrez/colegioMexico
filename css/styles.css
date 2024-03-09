@@ -127,3 +127,10 @@ li:last-child {
 .bienvenido-dos{
     margin: 10px auto;
 }
+.message_user{
+    margin: 10px auto;
+}
+.noData-user{
+    margin: 10px auto;
+    font-size: 25px;
+}
