@@ -14,6 +14,7 @@
         header("Location: ../pages/iniciarSession.php?error=2");
     }else{
         if($dataUser){
+            $_SESSION['id'] = $dataUser['id'];
             $_SESSION['user'] = $dataUser['Nombre'];
             $_SESSION['apellidoPa'] = $dataUser['ApellidoPaterno'];
             $_SESSION['apellidoMa'] = $dataUser['ApellidoMaterno'];
