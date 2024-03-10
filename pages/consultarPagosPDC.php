@@ -46,9 +46,9 @@
                 $statement->execute();
                 $existUser = $statement->fetch(PDO::FETCH_ASSOC);
                 if(empty($IDUsuario)){
-                    echo "<p class='error'>El campo del IDUsuario esta vacío.</p>";
+                    echo "<p class='error-page'>El campo del IDUsuario esta vacío.</p>";
                 }else if(!$existUser){
-                    echo "<p class='error'>El usuario ingresado no existe.</p>";
+                    echo "<p class='error-page'>El usuario ingresado no existe.</p>";
                 }else{
                     $consultaPagosById = "SELECT p.*FROM pagos p INNER JOIN usuarios u ON p.idUsuario = u.id WHERE u.IDUsuario = :idUser;";
                     $statement = $conexion -> prepare($consultaPagosById);
@@ -58,19 +58,11 @@
                     if($existUser && $dataPagos && count($dataPagos) > 0){
                         print_r($existUser);
                         print_r($dataPagos);
-                        //$_SESSION['dataPagos'] = $dataPagos;
-                        //$_SESSION['dataUserPF'] = $existUser;
-                        //print_r($_SESSION);
-                        //header("Location: ../pages/consultarPagosPDC.php?successful=1");
                         echo "<p>Hay un usuario con los siguientes datos.</p>";
                     }else{
-                        //header("Location: ../pages/consultarPagosPDC.php?successful=2");
-                        //echo "No hay usuairo y datos de pago";
-                        echo "<p>El usuario no tiene registros de pagos.</p>";
+                        echo "<p class='error-page'>El usuario: ".$IDUsuario.", no tiene registros de pagos.</p>";
                     }
                 }
-            }else{
-                echo "No es dentro de la misma pagina";
             }
         ?>
     </body>
