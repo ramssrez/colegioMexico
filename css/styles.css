@@ -123,14 +123,38 @@ li:last-child {
 }
 .bienvenido{
     margin: 10px auto;
+    font-family: Verdana, Georgia, 'Times New Roman', Times, serif;
 }
 .bienvenido-dos{
     margin: 10px auto;
+    font-family: Verdana, Georgia, 'Times New Roman', Times, serif;
 }
 .message_user{
     margin: 10px auto;
+    font-family: Verdana, Georgia, 'Times New Roman', Times, serif;
 }
 .noData-user{
     margin: 10px auto;
     font-size: 25px;
+    font-family: Verdana, Georgia, 'Times New Roman', Times, serif;
+}
+.table-crud{
+    margin: 10px auto;
+}
+.table-crud table{
+    font-size: 20px;
+    font-family: Verdana, Georgia, 'Times New Roman', Times, serif;
+    border: solid 2px #000000;
+    border-collapse: collapse;
+}
+.table-crud thead{
+    background: rgba(0, 0, 0, 0.7);
+}
+.table-crud th{
+    padding: 20px;
+    color: #fff;
+}
+.table-crud td{
+    padding: 10px;
+    border-bottom: solid 2px #000000;
 }
