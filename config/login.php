@@ -15,6 +15,7 @@
     }else{
         if($dataUser){
             $_SESSION['id'] = $dataUser['id'];
+            $_SESSION['idUser'] = $dataUser['IDUsuario'];
             $_SESSION['user'] = $dataUser['Nombre'];
             $_SESSION['apellidoPa'] = $dataUser['ApellidoPaterno'];
             $_SESSION['apellidoMa'] = $dataUser['ApellidoMaterno'];
