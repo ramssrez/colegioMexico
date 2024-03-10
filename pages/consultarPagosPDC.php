@@ -90,7 +90,7 @@
                             echo "<td>" . $pago->MesPagado . "</td>";
                             echo "<td>" . $pago->Monto . "</td>";
                             echo "<td>" . $pago->FechaPago . "</td>";
-                            echo "<td><a id='btn-actualizar' href='../config/deletePagos.?id=$pago->idPago'>Actualizar</a></td>";
+                            echo "<td><a id='btn-actualizar' href='../pages/actualizarPagoPDF.html?id=$pago->idPago'>Actualizar</a></td>";
                             echo "<td><a id='btn-eliminar' href='../config/deletePagos.php?id=$pago->idPago'>Eliminar</a></td>";
                             echo "</tr>";
                         }
