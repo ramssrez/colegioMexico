@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="../css/styles.css">
         <title>!Bienvenido <?php echo $client; ?></title>
     </head>
-    <body>
+    <body class = "background-pagos">
         <?php
             include("../components/navigationPF.php");
         ?>

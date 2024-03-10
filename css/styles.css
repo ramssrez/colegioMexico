@@ -158,3 +158,13 @@ li:last-child {
     padding: 10px;
     border-bottom: solid 2px #000000;
 }
+.background-pagos{
+    background-image: url("../img/pagos10.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.background-home{
+    background-image: url("../img/escuela10.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
