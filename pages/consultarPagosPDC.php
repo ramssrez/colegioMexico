@@ -31,11 +31,19 @@
                     <input type="number" id="usuario" name="IDUser" >
                 </div>
                 <div class="elemento">
-                    <input type="submit" value="Búscar">
+                    <input type="submit" value="Búscar" id="searchButton">
                 </div>
             </form>
         </div>
         <?php
+            if(isset($_GET['error']) && $_GET['error'] == 1 )
+            {
+                echo "<p class='error-page'>*Error: No se pudo eliminar el pago</p>";
+            }
+            if(isset($_GET['successful']) && $_GET['successful'] == 1 )
+            {
+                echo "<p class='succesful-page'>Se ha elimiando el pago</p>";
+            }  
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 include '../config/conexion.php';
                 $IDUsuario = $_POST['IDUser'];
@@ -95,5 +103,6 @@
                 }
             }
         ?>
+        <script src="../js/main.js"></script>
     </body>
 </html>
