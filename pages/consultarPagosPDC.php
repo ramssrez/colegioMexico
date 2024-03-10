@@ -35,7 +35,6 @@
                 </div>
             </form>
         </div>
-        <h1>Consulta de pagos</h1>
         <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 include '../config/conexion.php';
@@ -56,9 +55,36 @@
                     $statement->execute();
                     $dataPagos = $statement->fetchAll(PDO::FETCH_OBJ);
                     if($existUser && $dataPagos && count($dataPagos) > 0){
-                        print_r($existUser);
-                        print_r($dataPagos);
-                        echo "<p>Hay un usuario con los siguientes datos.</p>";
+                        echo "<h1 class='message_user'>Consulta de pagos</h1> ";
+                        echo"<h2 class='bienvenido-dos'>Padre de familia: ".$existUser['IDUsuario']."</h2>";
+                        echo"<h2 class='bienvenido-dos'>Nombre: ".$existUser['Nombre']." ".$existUser['ApellidoPaterno']." ".$existUser['ApellidoMaterno'].".</h2>";
+                        echo"<h2 class='bienvenido-dos'>Pagos realizados.</h2>";
+                        echo"<div class='table-crud'>";
+                        echo "<table>";
+                        echo "<thead>";
+                        echo "<tr>";
+                        echo "<th>ID</th>";
+                        echo "<th>Folio</th>";
+                        echo "<th>Concepto</th>";
+                        echo "<th>Mes</th>";
+                        echo "<th>Monto</th>";
+                        echo "<th>Fecha</th>";
+                        echo "</tr>";
+                        echo "</thead>";
+                        echo "<tbody>";
+                        foreach ($dataPagos as $pago) {
+                            echo "<tr>";
+                            echo "<td>" . $pago->idPago . "</td>";
+                            echo "<td>" . $pago->FolioPago . "</td>";
+                            echo "<td>" . $pago->Concepto . "</td>";
+                            echo "<td>" . $pago->MesPagado . "</td>";
+                            echo "<td>" . $pago->Monto . "</td>";
+                            echo "<td>" . $pago->FechaPago . "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</tbody>";
+                        echo "</table>";    
+                        echo"</div>";
                     }else{
                         echo "<p class='error-page'>El usuario: ".$IDUsuario.", no tiene registros de pagos.</p>";
                     }
