@@ -69,6 +69,8 @@
                         echo "<th>Mes</th>";
                         echo "<th>Monto</th>";
                         echo "<th>Fecha</th>";
+                        echo "<th></th>";
+                        echo "<th></th>";
                         echo "</tr>";
                         echo "</thead>";
                         echo "<tbody>";
@@ -80,6 +82,8 @@
                             echo "<td>" . $pago->MesPagado . "</td>";
                             echo "<td>" . $pago->Monto . "</td>";
                             echo "<td>" . $pago->FechaPago . "</td>";
+                            echo "<td><a id='btn-actualizar' href='../config/deletePagos.?id=$pago->idPago'>Actualizar</a></td>";
+                            echo "<td><a id='btn-eliminar' href='../config/deletePagos.php?id=$pago->idPago'>Eliminar</a></td>";
                             echo "</tr>";
                         }
                         echo "</tbody>";

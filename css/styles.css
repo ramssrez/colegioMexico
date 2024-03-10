@@ -178,3 +178,25 @@ li:last-child {
     margin: 10px auto;
     width: 450px;
 }
+#btn-eliminar{
+    background-color: #e50914;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+#btn-eliminar:hover{
+    background-color: rgb(230, 10, 21,.7);
+}
+#btn-actualizar{
+    background-color: #3e3e3a;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+#btn-actualizar:hover{
+    background-color: rgb(63, 63, 59,.7);
+}
