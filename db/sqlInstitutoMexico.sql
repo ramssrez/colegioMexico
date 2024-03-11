@@ -46,3 +46,18 @@ INSERT INTO usuarios (IDUsuario, Nombre, ApellidoPaterno, ApellidoMaterno, Edad,
 	VALUES ('0000', 'José', 'Sanchez', 'Hernandez', '25', 'Masculino', 'JSH@correo.com', 'PDC', 'Progweb2#');
 INSERT INTO usuarios (IDUsuario, Nombre, ApellidoPaterno, ApellidoMaterno, Edad, Sexo, Email, TipoUsuario, Pasword) 
 	VALUES ('9999', 'Diana', 'Medina', 'Herrera', '30', 'Femenino', 'DMH@correo.com', 'PF', 'Progweb2#');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (2, 'CP950ENE', 'Colegiatura primaria', 'Enero', 6500, '2024/01/07');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (2, 'AE950ENE', 'Actividad extraescolar', 'Enero', 580, '2024/01/05');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (2, 'DE950ENE', 'Desayuno', 'Enero', 1000, '2024/01/09');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (2, 'VM905FEB', 'Visita museo de cera', 'Febrero', 980, '2024/02/1');
+
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (3, 'VM905FEB', 'Visita museo de cera', 'Febrero', 980, '2024/02/1');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (3, 'VA905MAR', 'Visita acuario', 'Marzo', 1200, '2024/01/12');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (3, 'CA905ABR', 'Campamento', 'Abril', '2750', '2024/01/15');
+
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (5, 'CP950ENE', 'Colegiatura primaria', 'Enero', 6500, '2024/01/07');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (5, 'AE950ENE', 'Actividad extraescolar', 'Enero', 580, '2024/01/05');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (5, 'DE950ENE', 'Desayuno', 'Enero', 1000, '2024/01/09');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (5, 'VM905FEB', 'Visita museo de cera', 'Febrero', 980, '2024/02/1');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (5, 'VA905MAR', 'Visita acuario', 'Marzo', 1200, '2024/01/12');
+INSERT INTO pagos (idUsuario, FolioPago, Concepto, MesPagado, Monto, FechaPago) VALUES (5, 'CA905ABR', 'Campamento', 'Abril', '2750', '2024/01/15');
