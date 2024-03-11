@@ -7,9 +7,6 @@
         header("Location: ../index.php");
         die();
     }
-    if(isset($_POST[''])){
-
-    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,7 +25,7 @@
             <form method="POST">
                 <div class="elemento">
                     <label for="usuario">IDUsuario</label>
-                    <input type="number" id="usuario" name="IDUser" >
+                    <input type="number" id="usuario" name="IDUser" required="true">
                 </div>
                 <div class="elemento">
                     <input type="submit" value="Búscar" id="searchButton">
@@ -40,10 +37,18 @@
             {
                 echo "<p class='error-page'>*Error: No se pudo eliminar el pago</p>";
             }
+            if(isset($_GET['error']) && $_GET['error'] == 2 )
+            {
+                echo "<p class='error-page'>*Error: No se pudo actualizar el pago</p>";
+            }
             if(isset($_GET['successful']) && $_GET['successful'] == 1 )
             {
                 echo "<p class='succesful-page'>Se ha elimiando el pago</p>";
-            }  
+            } 
+            if(isset($_GET['successful']) && $_GET['successful'] == 2 )
+            {
+                echo "<p class='succesful-page'>Se ha actualizado el pago</p>";
+            }   
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 include '../config/conexion.php';
                 $IDUsuario = $_POST['IDUser'];
@@ -90,7 +95,7 @@
                             echo "<td>" . $pago->MesPagado . "</td>";
                             echo "<td>" . $pago->Monto . "</td>";
                             echo "<td>" . $pago->FechaPago . "</td>";
-                            echo "<td><a id='btn-actualizar' href='../pages/actualizarPagoPDF.html?id=$pago->idPago'>Actualizar</a></td>";
+                            echo "<td><a id='btn-actualizar' href='../pages/actualizarPagoPDF.php?id=$pago->idPago'>Actualizar</a></td>";
                             echo "<td><a id='btn-eliminar' href='../config/deletePagos.php?id=$pago->idPago'>Eliminar</a></td>";
                             echo "</tr>";
                         }
