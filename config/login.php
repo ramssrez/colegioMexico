@@ -3,7 +3,6 @@
     include './conexion.php';
     $usuario = $_POST['user'];
     $pass = $_POST['pass']; 
-    //SELECT * FROM `usuarios` WHERE IDUsuario = '9999' AND Pasword = 'Progweb2#';
     $consultaUsuario = "SELECT * FROM usuarios WHERE IDUsuario=:idUsuario AND Pasword = :userPass;";
     $statement = $conexion -> prepare($consultaUsuario);
     $statement -> bindParam(':idUsuario',$usuario);
