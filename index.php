@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/styles.css">
         <title>Colegio Instituto México</title>
     </head>
     <body>
@@ -21,16 +22,16 @@
                         <img src="./img/laboratorio.jpg" class="d-block w-100 img-fluid" alt="Laboratorio" data-bs-toggle="modal" data-bs-target="#modalLaboratorio">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/gimnasio.jpg" class="d-block w-100" alt="Gimnasio">
+                        <img src="./img/gimnasio.jpg" class="d-block w-100 img-fluid" alt="Gimnasio" data-bs-toggle="modal" data-bs-target="#modalGimnasio">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/biblioteca.jpg" class="d-block w-100" alt="Biblioteca">
+                        <img src="./img/biblioteca.jpg" class="d-block w-100 img-fluid" alt="Biblioteca" data-bs-toggle="modal" data-bs-target="#modalBiblioteca">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/salones.jpg" class="d-block w-100" alt="Salones">
+                        <img src="./img/salones.jpg" class="d-block w-100 img-fluid" alt="Salones" data-bs-toggle="modal" data-bs-target="#modalSalones">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/canchas.jpg" class="d-block w-100" alt="Canchas">
+                        <img src="./img/canchas.jpg" class="d-block w-100 img-fluid" alt="Canchas" data-bs-toggle="modal" data-bs-target="#modalCanchas">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -65,12 +66,71 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img src="./img/laboratorio.jpg" class="d-block mx-auto mb-3 img-fluid" alt="Fachada Principal">
+                        <img src="./img/laboratorio.jpg" class="d-block mx-auto mb-3 img-fluid" alt="Laboratorio">
                         <p>Laboratorio del Colegio Instituto México.</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="modalGimnasio" tabindex="-1" aria-labelledby="modalGimnacioLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalGimnacioLabel">Gimnasio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./img/gimnasio.jpg" class="d-block mx-auto mb-3 img-fluid" alt="Gimnasio">
+                        <p>Gimnasio del Colegio Instituto México.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalBiblioteca" tabindex="-1" aria-labelledby="modalBibliotecaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalBibliotecaLabel">Biblioteca</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./img/biblioteca.jpg" class="d-block mx-auto mb-3 img-fluid" alt="Biblioteca">
+                        <p>Biblioteca del Colegio Instituto México.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalSalones" tabindex="-1" aria-labelledby="modalSalonesLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalSalonesLabel">Salones</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./img/salones.jpg" class="d-block mx-auto mb-3 img-fluid" alt="Salones">
+                        <p>Salones del Colegio Instituto México.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalCanchas" tabindex="-1" aria-labelledby="modalCanchasLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCanchasLabel">Canchas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./img/canchas.jpg" class="d-block mx-auto mb-3 img-fluid" alt="Canchas">
+                        <p>Salones del Colegio Instituto México.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
         <!--
         <div class="mt-4">
             <h3 class="text-center">Haz clic en una imagen para ver más detalles.</h3>
