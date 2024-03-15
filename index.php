@@ -164,7 +164,35 @@
             </div>
             </div>
         </div>
-
+                <div class="container">
+            <h2 class="text-center my-4">Comentarios de nuestro estudiantes</h2>
+            <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                <div class="card-body">
+                    <p class="card-text">"Excelente ambiente de aprendizaje y profesores dedicados."</p>
+                    <footer class="blockquote-footer">Jose Juan Pérez Domiguez</footer>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                <div class="card-body">
+                    <p class="card-text">"Instalaciones modernas y variedad de actividades extracurriculares."</p>
+                    <footer class="blockquote-footer">María González Tellez</footer>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                <div class="card-body">
+                    <p class="card-text">"El personal administrativo es muy atento y siempre dispuesto a ayudar."</p>
+                    <footer class="blockquote-footer">Pedro Rodríguez Juarez</footer>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
         
         <!--
         <div class="mt-4">
