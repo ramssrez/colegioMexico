@@ -57,7 +57,7 @@
                     </div>
                     <div class="modal-body">
                         <img src="./img/fachada.jpg" class="d-block w-100 mx-auto mb-3 img-fluid" alt="Fachada Principal">
-                        <p>Fachada principal del Colegio Instituto México.</p>
+                        <p>Nuestra fachada le da la bienvenida a los estudiantes, personal y visitantes. Es la primera impresión que se tiene del Colegio Instituto México.</p>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="modal-body">
                         <img src="./img/laboratorio.jpg" class="d-block w-100 mx-auto mb-3 img-fluid" alt="Laboratorio">
-                        <p>Laboratorio del Colegio Instituto México.</p>
+                        <p>Nuestros laboratorios son espacios especializados equipados con herramientas, equipos y materiales específicos para llevar a cabo experimentos científicos, investigaciones y prácticas en diferentes áreas como química, biología, física, informática, entre otras.</p>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                     </div>
                     <div class="modal-body">
                         <img src="./img/gimnasio.jpg" class="d-block w-100 mx-auto mb-3 img-fluid" alt="Gimnasio">
-                        <p>Gimnasio del Colegio Instituto México.</p>
+                        <p>En los gimnasions los estudiantes pueden participar en clases de educación física, practicar deportes, realizar ejercicios y mantener un estilo de vida saludable.</p>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="modal-body">
                         <img src="./img/biblioteca.jpg" class="d-block w-100 mx-auto mb-3 img-fluid" alt="Biblioteca">
-                        <p>Biblioteca del Colegio Instituto México.</p>
+                        <p>En la biblioteca del Colegio Instituto México los estudiantes pueden acceder a una amplia variedad de libros, materiales de estudio, recursos digitales y otros medios de información.</p>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
                     </div>
                     <div class="modal-body">
                         <img src="./img/salones.jpg" class="d-block w-100  mx-auto mb-3 img-fluid" alt="Salones">
-                        <p>Salones del Colegio Instituto México.</p>
+                        <p>Nuestros salones son espacios designados para la enseñanza y el aprendizaje. En ellos, los estudiantes reciben instrucción de maestros y participan en actividades educativas.</p>
                     </div>
                 </div>
             </div>
@@ -122,12 +122,12 @@
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalCanchasLabel">Canchas</h5>
+                        <h5 class="modal-title" id="modalCanchasLabel">Canchas deportivas</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <img src="./img/canchas.jpg" class="d-block w-100 mx-auto mb-3 img-fluid" alt="Canchas">
-                        <p>Salones del Colegio Instituto México.</p>
+                        <p>Las canchas son áreas al aire libre destinadas a la práctica de deportes y actividades físicas. En ellas, los estudiantes pueden jugar fútbol, baloncesto, voleibol, tenis u otros deportes, promoviendo el ejercicio físico, la competencia deportiva y el trabajo en equipo.</p>
                     </div>
                 </div>
             </div>
