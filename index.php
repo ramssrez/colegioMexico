@@ -132,7 +132,38 @@
                 </div>
             </div>
         </div>
-
+        <div class="container">
+            <h2 class="text-center my-4">Costos de nuestras carreras</h2>
+            <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                <img src="./img/desarrolloSoftware.jpg" class="card-img-top" alt="Carrera 1">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Desarrollo de Software</h5>
+                    <p class="card-text text-center">$5000/mes</p>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                <img src="./img/analisisMercado.jpg" class="card-img-top" alt="Carrera 2">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Análisis de mercado</h5>
+                    <p class="card-text text-center">$6000/mes</p>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                <img src="./img/ingenieriaMecanica.jpg" class="card-img-top" alt="Carrera 3">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Ingeniería Mécanica</h5>
+                    <p class="card-text text-center">$6500/mes</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
 
         
         <!--
