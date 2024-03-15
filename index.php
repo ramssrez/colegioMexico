@@ -11,26 +11,26 @@
             include("./components/navigationGeneral.php");
         ?> 
         <div class="container">
-            <h1 class="text-center my-4">Imágenes Alusivas a la Institución Educativa</h1>
+            <h1 class="text-center my-4">Colegio Instituto México</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active center">
                         <img src="./img/fachada.jpg" class="d-block w-100 img-fluid" alt="Fachada Principal" alt="Fachada Principal" data-bs-toggle="modal" data-bs-target="#modalFachada">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/laboratorio.jpg" class="d-block w-100 img-fluid" alt="Salones de Clase">
+                        <img src="./img/laboratorio.jpg" class="d-block w-100 img-fluid" alt="Laboratorio" data-bs-toggle="modal" data-bs-target="#modalLaboratorio">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/salones.jpg" class="d-block w-100" alt="Gimnasio">
+                        <img src="./img/gimnasio.jpg" class="d-block w-100" alt="Gimnasio">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/canchas.jpg" class="d-block w-100" alt="Biblioteca">
+                        <img src="./img/biblioteca.jpg" class="d-block w-100" alt="Biblioteca">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/gimnasio.jpg" class="d-block w-100" alt="Laboratorios">
+                        <img src="./img/salones.jpg" class="d-block w-100" alt="Salones">
                     </div>
                     <div class="carousel-item">
-                        <img src="./img/biblioteca.jpg" class="d-block w-100" alt="Canchas Deportivas">
+                        <img src="./img/canchas.jpg" class="d-block w-100" alt="Canchas">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -43,7 +43,35 @@
                 </button>
             </div>
         </div>
-
+        <div class="modal fade" id="modalFachada" tabindex="-1" aria-labelledby="modalFachadaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalFachadaLabel">Fachada Principal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./img/fachada.jpg" class="d-block mx-auto mb-3 img-fluid" alt="Fachada Principal">
+                        <p>Fachada principal del Colegio Instituto México.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalLaboratorio" tabindex="-1" aria-labelledby="modalLaboratorioLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLaboratorioLabel">Laboratorios</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./img/laboratorio.jpg" class="d-block mx-auto mb-3 img-fluid" alt="Fachada Principal">
+                        <p>Laboratorio del Colegio Instituto México.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
         <div class="mt-4">
             <h3 class="text-center">Haz clic en una imagen para ver más detalles.</h3>
         </div>
@@ -77,25 +105,12 @@
                 </div>
             </div>
         </div>  
+        -->
         
-        
 
 
 
-        <div class="modal fade" id="modalFachada" tabindex="-1" aria-labelledby="modalFachadaLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalFachadaLabel">Fachada Principal</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="./img/escuela.jpg" class="d-block mx-auto mb-3 img-fluid" alt="Fachada Principal">
-                        <p>Descripción de la Fachada Principal...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
