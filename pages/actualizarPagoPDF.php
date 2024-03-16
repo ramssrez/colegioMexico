@@ -13,6 +13,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="../css/styles.css" rel="stylesheet">
         <title>Actualizar pago</title>
     </head>
     <body>
@@ -31,34 +32,34 @@
                 </div>
             </div>
         </nav> 
-        <div class="contenedor">
-            <h2>Actualizar datos pago</h2>
+        <div class="custom-container mt-5">
+            <h2 class="text-center">Actualizar datos pago</h2>
             <form action="../config/actualizarPago.php" method="POST">
                 <div class="elemento">
                     <input type="hidden" id="idPago" name="idPago" readonly value=<?php echo $dataPago["idPago"]?>>
                 </div>
-                <div class="elemento">
+                <div class="form-group">
                     <label for="usuario">Folio pago</label>
-                    <input type="text" id="pagoFolio" name="pagoFolio" value=<?php echo $dataPago["FolioPago"]?> required="true">
+                    <input class="form-control" type="text" id="pagoFolio" name="pagoFolio" value=<?php echo $dataPago["FolioPago"]?> required="true">
                 </div>
-                <div class="elemento">
+                <div class="form-group">
                     <label for="usuario">Concepto</label>
-                    <input type="text" id="pagoConcepto" name="pagoConcepto" value="<?php echo $dataPago["Concepto"]?>" required="true">
+                    <input class="form-control" type="text" id="pagoConcepto" name="pagoConcepto" value="<?php echo $dataPago["Concepto"]?>" required="true">
                 </div>
-                <div class="elemento">
+                <div class="form-group">
                     <label for="usuario">Mes Pagado</label>
-                    <input type="text" id="pagoMes" name="pagoMes" value="<?php echo $dataPago["MesPagado"]?>" required="true">
+                    <input class="form-control" type="text" id="pagoMes" name="pagoMes" value="<?php echo $dataPago["MesPagado"]?>" required="true">
                 </div>
-                <div class="elemento">
+                <div class="form-group">
                     <label for="usuario">Monto</label>
-                    <input type="number" id="pagoMonto" name="pagoMonto" value="<?php echo $dataPago["Monto"]?>" required="true">
+                    <input class="form-control" type="number" id="pagoMonto" name="pagoMonto" value="<?php echo $dataPago["Monto"]?>" required="true">
                 </div>
-                <div class="elemento">
+                <div class="form-group">
                     <label for="usuario">Fecha Pago</label>
-                    <input type="text" id="pagoFecha" name="pagoFecha" value="<?php echo $dataPago["FechaPago"]?>" required="true">
+                    <input class="form-control" type="text" id="pagoFecha" name="pagoFecha" value="<?php echo $dataPago["FechaPago"]?>" required="true">
                 </div>
-                <div class="elemento">
-                    <input type="submit" value="Actualizar">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-warning mt-2 ">Actualizar</button>                
                 </div>
             </form>
         </div>  
