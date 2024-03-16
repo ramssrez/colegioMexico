@@ -226,6 +226,22 @@ li:last-child {
     border-radius: 10px;
     text-align: center;
 }
+.error-page{
+    background-color: rgb(230, 10, 21);
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 400px;
+}
+.succesful-page{
+    background-color: rgb(0, 174, 1);
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 400px;
+}
 .custom-container .succesful{
     background-color: rgb(0, 174, 1);
     color: #fff;
@@ -234,13 +250,33 @@ li:last-child {
     margin-bottom: 15px;
     text-align: center;
 }
-@media(max-width:400px){
+@media(max-width:420px){
     .custom-container{
+        max-width: 300px;
+    }
+    .error-page{
+        max-width: 300px;
+    }
+    .succesful-page{
         max-width: 300px;
     }
 }
 @media(max-width:320px){
     .custom-container{
         max-width: 200px;
+    }
+    .error-page{
+        max-width: 200px;
+    }
+    .succesful-page{
+        max-width: 200px;
+    }
+}
+@media(max-width:220px){
+    .error-page{
+        max-width: 100px;
+    }
+    .succesful-page{
+        max-width: 100px;
     }
 }
