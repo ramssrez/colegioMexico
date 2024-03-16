@@ -4,14 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="../css/styles.css" rel="stylesheet">
         <title>Colegio Instituto México</title>
     </head>
     <body>
         <?php
             include("../components/navigationGeneral.php");
         ?>
-        <div class="contenedor">
-            <h2>Registro</h2>
+        <div class="custom-container mt-5">
+            <h2 class="my-4 text-center">Registro</h2>
             <?php
                 if(isset($_GET['error']) && $_GET['error'] == 1 )
                 {
@@ -47,46 +48,47 @@
                 }       
             ?>
             <form action="../config/createUser.php" method="POST">
-                <div class="elemento">
+                <div class="form-group">
                     <label for="userName">Nombre</label>
-                    <input type="text" id="userName" name="userName">
+                    <input class="form-control" type="text" id="userName" name="userName" data-bs-toggle="tooltip" data-bs-placement="right" title="Ingresa tu nombre.">
                 </div> 
-                <div class="elemento">
+                <div  class="form-group">
                     <label for="userApellidoPaterno">Apellido Paterno</label>
-                    <input type="text" id="userApellidoPaterno" name="userApellidoPaterno" required="true">
+                    <input class="form-control"  type="text" id="userApellidoPaterno" name="userApellidoPaterno" data-bs-toggle="tooltip" data-bs-placement="right" title="Ingresa tu apellido paterno.">
                 </div> 
-                <div class="elemento">
+                <div class="form-group">
                     <label for="userApellidoMaterno">Apellido Materno</label>
-                    <input type="text" id="userApellidoMaterno" name="userApellidoMaterno" required="true">
+                    <input class="form-control" type="text" id="userApellidoMaterno" name="userApellidoMaterno" data-bs-toggle="tooltip" data-bs-placement="right" title="Ingresa tu apellido materno.">
                 </div> 
-                <div class="elemento">
+                <div class="form-group">
                     <label for="userEdad">Edad</label>
-                    <input type="number" id="userEdad" name="userEdad" required="true">
+                    <input class="form-control" type="number" id="userEdad" name="userEdad" data-bs-toggle="tooltip" data-bs-placement="right" title="Ingresa tu edad.">
                 </div> 
-                <div class="elemento">
+                <div class="form-group">
                     <label for="userSexo">Sexo</label>
-                    <select name="userSexo" id="userSexo">
+                    <select class="form-select" name="userSexo" id="userSexo">
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
                     </select>
                 </div>
-                <div class="elemento">
+                <div class="form-group">
                     <label for="userCorreo">Correo</label>
-                    <input type="text" id="userCorreo" name="userCorreo" required="true">
+                    <input class="form-control" type="email" id="userCorreo" name="userCorreo" data-bs-toggle="tooltip" data-bs-placement="right" title="Ingresa tu correo electronico">
                 </div>
-                <div class="elemento">
+                <div class="form-group">
                     <label for="userPassword">Contraseña</label>
-                    <input type="password" id="userPassword" name="userPassword" required="true">
+                    <input class="form-control" type="password" id="userPassword" name="userPassword" data-bs-toggle="tooltip" data-bs-placement="right" title="Longitud mínima de 8 posiciones, con letras y números y por lo menos un carácter especial (#,$,-,_,&,%)”.">
                 </div>
-                <div class="elemento">
+                <div class="form-group">
                     <label for="userPasswordDos">Confirmar contraseña</label>
-                    <input type="password" id="userPasswordDos" name="userPasswordDos" required="true">
+                    <input class="form-control" type="password" id="userPasswordDos" name="userPasswordDos" data-bs-toggle="tooltip" data-bs-placement="right" title="Longitud mínima de 8 posiciones, con letras y números y por lo menos un carácter especial (#,$,-,_,&,%)”.">
                 </div>
-                <div class="elemento">
-                    <input id="btn-agregar" type="submit" name= "userSubmit" value="Agregar">
-                </div>    
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success mt-2 ">Registrarse</button>                
+                </div>
             </form>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="../js/tooltipImplementacion.js"></script>  
     </body>
 </html>
