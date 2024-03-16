@@ -1,8 +1,24 @@
-        <nav class="navbar">
-            <ul>
-                <li><a href="../pages/homeUserPDC.php">Inicio</a></li>
-                <li><a href="../pages/consultarPagosPDC.php">Consultar pagos</a></li>
-                <li><a href="#">Registrar pagos</a></li>
-                <li><a href="../config/logout.php">Salir</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Colegio Instituto México</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../pages/homeUserPDC.php">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/consultarPagosPDC.php">Consultar pagos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Registrar pagos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../config/logout.php">Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
