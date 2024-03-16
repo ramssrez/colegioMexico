@@ -1,12 +1,3 @@
-        <!--
-        <nav class="navbar column">
-            <ul>
-                <li><a href="../../colegio-instituto-mexico/index.php">Inicio</a></li>
-                <li><a href="../../colegio-instituto-mexico/pages/registerUser.php">Registrarse</a></li>
-                <li><a href="../../colegio-instituto-mexico/pages/iniciarSession.php">Iniciar sesión</a></li>
-            </ul>
-        </nav>
-        -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Colegio Instituto México</a>
