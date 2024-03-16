@@ -25,7 +25,7 @@
             <form method="POST">
                 <div class="elemento">
                     <label for="usuario">IDUsuario</label>
-                    <input type="number" id="usuario" name="IDUser" required="true">
+                    <input type="number" id="idUserInput" name="IDUser" required="true">
                 </div>
                 <div class="elemento">
                     <input type="submit" value="Búscar" id="searchButton">
