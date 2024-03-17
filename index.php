@@ -11,7 +11,7 @@
             include("./components/navigationGeneral.php");
         ?> 
         <div class="container">
-            <h1 class="text-center my-4">Colegio Instituto México</h1>
+            <h1 class="text-center my-7 margenTop" style="margin-top: 55px;">Colegio Instituto México</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active center">
