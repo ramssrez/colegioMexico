@@ -42,12 +42,16 @@
                 {
                     echo "<p class='error'>*Error: El correo debe de contener el @</p>";
                 }
+                if(isset($_GET['error']) && $_GET['error'] == 8 )
+                {
+                    echo "<p class='error'>*Error: El captcha se ha activado, vuelve a intentarlo</p>";
+                }
                 if(isset($_GET['succesful']) && $_GET['succesful'] == 1 )
                 {
                     echo "<p class='succesful'>Se ha registrado un usuario correctamente. Id Usuario Asignado=".$_GET['id']."</p>";
                 }       
             ?>
-            <form action="../config/createUser.php" method="POST">
+            <form id="formRegister" action="../config/createUser.php" method="POST">
                 <div class="form-group">
                     <label for="userName">Nombre</label>
                     <input class="form-control" type="text" id="userName" name="userName" data-bs-toggle="tooltip" data-bs-placement="right" title="Ingresa tu nombre.">
@@ -84,11 +88,34 @@
                     <input class="form-control" type="password" id="userPasswordDos" name="userPasswordDos" data-bs-toggle="tooltip" data-bs-placement="right" title="Longitud mínima de 8 posiciones, con letras y números y por lo menos un carácter especial (#,$,-,_,&,%)”.">
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-success mt-2 ">Registrarse</button>                
+                    <button id= "registerButton" type="button" class="btn btn-success mt-2 ">Registrarse</button> 
                 </div>
             </form>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="../js/tooltipImplementacion.js"></script>  
+        <script src="../js/tooltipImplementacion.js"></script> 
+        <script src="https://www.google.com/recaptcha/api.js?render=6LfAjKIpAAAAAKwDxv55K50TYrGYFgsl1dd8414s"></script>        
+        <script>
+            document.getElementById('registerButton').addEventListener('click', function() {
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LfAjKIpAAAAAKwDxv55K50TYrGYFgsl1dd8414s', {action: 'validaUsuario'})
+                        .then(function(token) {
+                            var form = document.getElementById('formRegister');
+                            var inputToken = document.createElement('input');
+                            var inputAccion = document.createElement('input');
+                            inputToken.type = "hidden";
+                            inputToken.name = "token"
+                            inputToken.value = token;
+
+                            inputAccion.type = "hidden";
+                            inputAccion.name = "action";
+                            inputAccion.value = "validaUsuario";
+                            form.appendChild(inputToken);
+                            form.appendChild(inputAccion);
+                            form.submit();
+                        });
+                    });
+            });
+        </script>
     </body>
 </html>
