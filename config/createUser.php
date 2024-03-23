@@ -1,5 +1,6 @@
 <?php
     include './conexion.php';
+    define('CLAVE','6LfAjKIpAAAAAOwxGPh3mTeaTP5wReCzIVKhZ3gw');
     $userName = $_POST['userName'];
     $userApellidoPaterno = $_POST['userApellidoPaterno'];
     $userApellidoMaterno = $_POST['userApellidoMaterno'];
@@ -8,12 +9,22 @@
     $userCorreo = $_POST['userCorreo'];
     $userPassword = $_POST['userPassword'];
     $userPasswordDos = $_POST['userPasswordDos'];
+    $token = $_POST['token'];
+    $action = $_POST['action'];
     $patron = '/[#$\-_&%]/';
+
+    $cu = curl_init();
+    curl_setopt($cu,CURLOPT_URL,"https://www.google.com/recaptcha/api/siteverify");
+    curl_setopt($cu,CURLOPT_POST, 1);
+    curl_setopt($cu,CURLOPT_POSTFIELDS, http_build_query(array('secret' => CLAVE, 'response' => $token)));
+    curl_setopt($cu,CURLOPT_RETURNTRANSFER,true);
+    $response = curl_exec($cu);
+    curl_close($cu);
+    $datos = json_decode($response,true);
     if(empty($userName) || empty($userApellidoPaterno || empty($userApellidoMaterno) ||
         empty($userEdad) || empty($userCorreo) || empty($userPassword))){
         header("Location: ../pages/registerUser.php?error=2");
-    }
-    else if(strlen($userPassword < 8)){
+    }else if(strlen($userPassword < 8)){
         header("Location: ../pages/registerUser.php?error=3");
     }else if($userPassword != $userPasswordDos){
         header("Location: ../pages/registerUser.php?error=4");
@@ -23,6 +34,8 @@
         header("Location: ../pages/registerUser.php?error=6");
     }else if(strpos($userCorreo,'@') === false){
         header("Location: ../pages/registerUser.php?error=7");
+    }else if($datos['success'] != 1 && $datos['score'] <= 0.5){
+        header("Location: ../pages/registerUser.php?error=8");
     }else{
         $consultaLastUsuario = "SELECT IDUsuario FROM usuarios ORDER BY id DESC LIMIT 1;";
         $statement = $conexion -> prepare($consultaLastUsuario);
